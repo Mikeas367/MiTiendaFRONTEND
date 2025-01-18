@@ -1,0 +1,11 @@
+.chart-container {
+    max-width: 600px; /* Ajusta el ancho máximo */
+    margin: 0 auto; /* Centra el gráfico */
+    padding: 20px; /* Espaciado interno */
+  }
+  
+  .chart-container h2 {
+    text-align: center; /* Centra el título */
+    margin-bottom: 10px; /* Espaciado debajo del título */
+  }
+  

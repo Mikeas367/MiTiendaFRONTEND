@@ -1,0 +1,106 @@
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra los botones verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background: url('../../public/fondo.avif') no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+}
+
+.menu-title {
+    font-size: 36px; /* Tamaño grande para el título */
+    color: #fff; /* Color blanco para destacar sobre el fondo */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para legibilidad */
+    text-align: center;
+    position: relative; /* Permite ajustar la posición relativa */
+    top: -90px; /* Mueve el título hacia arriba sin afectar a los botones */
+}
+
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre los botones */
+    flex-wrap: wrap; /* Permite que los botones se ajusten en varias filas si no caben */
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* Ancho fijo para uniformidad */
+    height: 60px; /* Altura fija para uniformidad */
+    font-size: 18px; /* Tamaño de fuente mayor */
+    font-weight: bold;
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.2s, background-color 0.3s;
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Color del texto */
+}
+
+.menu-btn:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+/* Colores específicos para cada botón */
+.new-product-btn {
+    background-color: #4CAF50; /* Verde */
+}
+
+.new-product-btn:hover {
+    background-color: #45A049; /* Verde más oscuro */
+}
+
+.sale-btn {
+    background-color: #2196F3; /* Azul */
+}
+
+.sale-btn:hover {
+    background-color: #1976D2; /* Azul más oscuro */
+}
+
+.products-btn {
+    background-color: #FF5722; /* Naranja */
+}
+
+.products-btn:hover {
+    background-color: #E64A19; /* Naranja más oscuro */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .menu-title {
+        font-size: 28px; /* Reducir tamaño del título en pantallas pequeñas */
+        top: -30px; /* Ajustar la posición del título */
+    }
+
+    .menu-buttons {
+        gap: 10px; /* Reducir espacio entre los botones */
+    }
+
+    .menu-btn {
+        width: 150px; /* Reducir el tamaño de los botones */
+        height: 50px;
+        font-size: 16px; /* Reducir el tamaño del texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-title {
+        font-size: 24px; /* Reducir aún más el tamaño del título */
+        top: -20px; /* Ajustar la posición del título */
+    }
+
+    .menu-btn {
+        width: 120px; /* Reducir el tamaño de los botones en pantallas muy pequeñas */
+        height: 40px;
+        font-size: 14px; /* Reducir el tamaño del texto */
+    }
+
+    .menu-buttons {
+        flex-direction: column; /* Apilar los botones verticalmente */
+        gap: 15px; /* Espacio entre los botones apilados */
+    }
+}
