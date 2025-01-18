@@ -50,9 +50,12 @@ const PurchaseComponent = () => {
 
   const handleSubmit = () => {
     const saleDetails = cart.map(item => ({
-      product: { id: item.product.id },
-      quantity: item.quantity,
+      productName: item.product.name, // Enviar el nombre del producto
+      productPrice: item.product.salePrice, // Enviar el precio del producto
+      quantity: item.quantity, // Enviar la cantidad
     }));
+
+    console.log("Detalles de venta que envio: ", saleDetails)
 
     saleService.createSale(saleDetails)
       .then(response => {

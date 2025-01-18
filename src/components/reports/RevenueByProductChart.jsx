@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Pie } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import saleService from "../../services/SaleService";
-import { Chart as ChartJS, ArcElement, Title, Tooltip, Legend } from "chart.js";
-import "./reportscss.css"; // Importa el archivo CSS
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
+import "./reportscss.css"; 
 
-ChartJS.register(ArcElement, Title, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const RevenueByProductChart = () => {
   const [chartData, setChartData] = useState({
@@ -23,13 +23,7 @@ const RevenueByProductChart = () => {
               {
                 label: "Ingresos Generados $",
                 data: data.map(item => item.totalRevenue),
-                backgroundColor: [
-                  "#FF6384",
-                  "#36A2EB",
-                  "#FFCE56",
-                  "#4BC0C0",
-                  "#9966FF",
-                ],
+                backgroundColor: "rgba(75, 192, 192, 0.6)",
               },
             ],
           });
@@ -46,7 +40,7 @@ const RevenueByProductChart = () => {
     <div className="chart-container">
       <h2>Ingresos por Producto</h2>
       {chartData.labels.length > 0 ? (
-        <Pie data={chartData} />
+        <Bar data={chartData} />
       ) : (
         <p>No hay datos disponibles para mostrar</p>
       )}
