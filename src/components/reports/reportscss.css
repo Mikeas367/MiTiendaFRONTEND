@@ -1,11 +1,40 @@
 .chart-container {
-    max-width: 600px; /* Ajusta el ancho máximo */
-    margin: 0 auto; /* Centra el gráfico */
-    padding: 20px; /* Espaciado interno */
+  max-width: 800px;
+  margin: 20px auto; /* Centra el gráfico */
+  padding: 30px;
+  background-color: #f8f9fa; /* Fondo claro */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: transform 0.2s ease-in-out;
+}
+
+
+.chart-title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+
+.loading-text,
+.no-data-text {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.loading-text {
+  animation: fadeIn 1.5s infinite;
+}
+
+@keyframes fadeIn {
+  0%, 100% {
+    opacity: 0.5;
   }
-  
-  .chart-container h2 {
-    text-align: center; /* Centra el título */
-    margin-bottom: 10px; /* Espaciado debajo del título */
+  50% {
+    opacity: 1;
   }
-  
+}

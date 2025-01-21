@@ -1,0 +1,30 @@
+.container {
+    background-color: #f8f9fa; /* Fondo claro */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  h1 {
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  .table thead {
+    text-align: center;
+  }
+  
+  .alert {
+    margin-top: 10px;
+  }
+  
+  input.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
